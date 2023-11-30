@@ -51,14 +51,14 @@ const ServiceTab = () => {
                                         {item.description}
                                     </Text>
 
-                                    <Text 
+                                    {/* <Text 
                                         style={{
                                             ...FONTS.h4,
                                             color: COLORS.primary
                                         }}
                                     >
                                         {item.price}
-                                    </Text>
+                                    </Text> */}
                                 </View>
 
                                 <View style={styles.cardRightContent}>

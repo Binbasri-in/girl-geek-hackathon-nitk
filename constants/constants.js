@@ -38,7 +38,7 @@ const walkthrough = [
 const home_tabs = [
     {
         id: 0,
-        label: "Product"
+        label: "Today"
     },
     {
         id: 1,
@@ -46,7 +46,7 @@ const home_tabs = [
     },
     {
         id: 2,
-        label: "Service"
+        label: "My Data"
     }
 ]
 

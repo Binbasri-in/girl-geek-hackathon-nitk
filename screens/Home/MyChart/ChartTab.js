@@ -64,7 +64,7 @@ const ChartTab = () => {
                         marginBottom: SIZES.base
                     }}
                 >
-                    Total Spending
+                    Total time
                 </Text>
 
                 <Text
@@ -73,7 +73,7 @@ const ChartTab = () => {
                         color: COLORS.primary
                     }}
                 >
-                    {`$${totalSpending.toLocaleString('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
+                   51 hrs
                 </Text>
 
                 <VictoryChart
@@ -140,7 +140,7 @@ const ChartTab = () => {
                                     marginBottom: 4
                                 }}
                             >
-                                {`Order No #${item.order_no}`}
+                                {`Task No #${item.order_no}`}
                             </Text>
 
                             <Text
@@ -160,7 +160,7 @@ const ChartTab = () => {
                                     color: COLORS.primary
                                 }}
                             >
-                                {item.total}
+                                {item.total} hrs
                             </Text>
                         </View>
                     </View>

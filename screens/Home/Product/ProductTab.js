@@ -143,15 +143,15 @@ const ProductTab = () => {
                                             >
                                                 {item?.title}
                                             </Text>
-
                                             <Text
                                                 style={{
-                                                    ...FONTS.body3,
+                                                    ...FONTS.h4,
                                                     color: COLORS.light
                                                 }}
                                             >
                                                 {item?.description}
                                             </Text>
+
                                         </View>
 
                                         {/* Date */}
@@ -210,8 +210,8 @@ const ProductTab = () => {
                     />
 
                     <IconLabelButton
-                        icon={icons.car}
-                        label="Transport"
+                        icon={icons.gift_fill}
+                        label="Workolic"
                         bgColor={COLORS.support1_08}
                     />
 
@@ -237,14 +237,14 @@ const ProductTab = () => {
                     }}
                 >
                     <IconLabelButton
-                        icon={icons.clock}
-                        label="Flash Sale"
+                        icon={icons.clipboard}
+                        label="Checklist"
                         bgColor={COLORS.error08}
                     />
 
                     <IconLabelButton
                         icon={icons.search_fill}
-                        label="Search"
+                        label="Scan"
                         bgColor={COLORS.success08}
                     />
 
@@ -320,245 +320,12 @@ const ProductTab = () => {
         )
     }
 
-    function renderFlashDeals() {
-        return (
-            <Section
-                title="Sale time product"
-                containerStyle={{
-                    marginTop: SIZES.padding,
-                }}
-                seeMoreOnPress={() => {
-                    navigation.navigate("FlashDeal")
-                }}
-            >
-                <FlatList
-                    data={dummyData.flashDeals}
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    style={{
-                        marginTop: SIZES.radius,
-                        //marginBottom: SIZES.padding
-                    }}
-                    decelerationRate="fast"
-                    listKey="FlashDeals"
-                    keyExtractor={(_, index) => `FlashDeals_${index}`}
-                    renderItem={({ item, index }) => {
-                        if (index == 0) {
-                            return (
-                                <View
-                                    style={styles.flashDealsContainer}
-                                >
-                                    <Text
-                                        style={{
-                                            color: COLORS.light,
-                                            ...FONTS.h2
-                                        }}
-                                    >
-                                        {item?.title}
-                                    </Text>
-                                    <Text
-                                        style={{
-                                            marginTop: SIZES.padding,
-                                            color: COLORS.light,
-                                            ...FONTS.body3
-                                        }}
-                                    >
-                                        {item?.desc}
-                                    </Text>
-                                    <Image
-                                        source={images.clock}
-                                        resizeMode="contain"
-                                        style={{
-                                            position: 'absolute',
-                                            top: 30,
-                                            right: -30,
-                                            width: 100,
-                                            height: 100
-                                        }}
-                                    />
-                                </View>
-                            )
-                        } else {
-                            return (
-                                <View
-                                    style={{
-                                        ...styles.flashDealsContainer,
-                                        marginLeft: SIZES.radius,
-                                        marginRight: index == dummyData.flashDeals.length - 1 ? SIZES.padding : 0,
-                                        backgroundColor: COLORS.light
-                                    }}
-                                >
-                                    {/* Product Image */}
-                                    <Image
-                                        source={item?.image}
-                                        resizeMode="contain"
-                                        style={{
-                                            width: 90,
-                                            height: 90,
-                                        }}
-                                    />
 
-                                    {/* Products Sold Bar */}
-                                    <ProductSoldBar
-                                        percentage={item?.percentage}
-                                    />
-
-                                    {/* Description */}
-                                    <Text
-                                        style={{
-                                            marginTop: SIZES.radius,
-                                            ...FONTS.body3
-                                        }}
-                                    >
-                                        {`${item?.sold_qty}/${item?.total_qty}`}
-                                    </Text>
-                                    <Text
-                                        style={{
-                                            ...FONTS.body3
-                                        }}
-                                    >
-                                        products sold
-                                        </Text>
-                                </View>
-                            )
-                        }
-                    }}
-                />
-            </Section>
-        )
-    }
-
-    function renderPromotionItems() {
-        return (
-            <Section
-                title="Promotion Items"
-                containerStyle={{
-                    marginTop: SIZES.padding
-                }}
-                seeMoreOnPress={() => {
-
-                }}
-            >
-                <FlatList
-                    data={dummyData.promoItems}
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                    style={{
-                        marginTop: SIZES.radius
-                    }}
-                    decelerationRate="fast"
-                    listKey="PromotionItems"
-                    keyExtractor={(_, index) => `PromotionItems_${index}`}
-                    renderItem={({ item, index }) => {
-                        if (index == 0) {
-                            return (
-                                <View
-                                    style={{
-                                        ...styles.promoItemContainer,
-                                        alignItems: "flex-start",
-                                        paddingHorizontal: SIZES.padding
-                                    }}
-                                >
-                                    <Text
-                                        style={{
-                                            color: COLORS.light,
-                                            ...FONTS.h2
-                                        }}
-                                    >
-                                        {item?.title}
-                                    </Text>
-                                    <Text
-                                        style={{
-                                            marginTop: SIZES.radius,
-                                            color: COLORS.light,
-                                            ...FONTS.body3
-                                        }}
-                                    >
-                                        {item?.desc}
-                                    </Text>
-                                    <Image
-                                        source={images.cube}
-                                        resizeMode="contain"
-                                        style={{
-                                            position: 'absolute',
-                                            top: 30,
-                                            right: -30,
-                                            width: 100,
-                                            height: 100
-                                        }}
-                                    />
-                                </View>
-                            )
-                        } else {
-                            return (
-                                <View
-                                    style={{
-                                        ...styles.promoItemContainer,
-                                        marginLeft: SIZES.radius,
-                                        marginRight: index == dummyData.flashDeals.length - 1 ? SIZES.padding : 0,
-                                        backgroundColor: COLORS.light
-                                    }}
-                                >
-                                    {/* Product Image */}
-                                    <Image
-                                        source={item?.image}
-                                        resizeMode="contain"
-                                        style={{
-                                            width: 90,
-                                            height: 90,
-                                            alignSelf: 'center'
-                                        }}
-                                    />
-
-                                    {/* Name */}
-                                    <Text
-                                        style={{
-                                            marginTop: SIZES.radius,
-                                            ...FONTS.body3
-                                        }}
-                                    >
-                                        {item?.name}
-                                    </Text>
-
-                                    {/* Price & Discount */}
-                                    <View
-                                        style={{
-                                            flexDirection: 'row',
-                                            width: "100%",
-                                            alignItems: 'center',
-                                            justifyContent: 'space-between'
-                                        }}
-                                    >
-                                        <Text
-                                            style={{
-                                                ...FONTS.h2,
-                                                color: COLORS.primary
-                                            }}
-                                        >
-                                            ${item?.price.toFixed(2)}
-                                        </Text>
-                                        <Text
-                                            style={{
-                                                ...FONTS.body4,
-                                                color: COLORS.grey
-                                            }}
-                                        >
-                                            {item?.discount}
-                                        </Text>
-                                    </View>
-                                </View>
-                            )
-                        }
-                    }}
-                />
-            </Section>
-        )
-    }
 
     function renderCategories() {
         return (
             <Section
-                title="You may like"
+                title="Your Statistics"
                 containerStyle={{
                     marginTop: SIZES.padding,
                     marginBottom: SIZES.padding
@@ -596,33 +363,26 @@ const ProductTab = () => {
                                     }}
                                 >
                                     <View
-                                        style={styles.categoryImageContainer}
+                                        style={[styles.categoryImageContainer,{backgroundColor:'lightgreen'}]}
                                     >
-                                        <Image
-                                            source={item?.image_1}
-                                            resizeMode="contain"
-                                            style={styles.categoryImage}
-                                        />
+                                        
+                                        
                                     </View>
 
                                     <View
-                                        style={styles.categoryImageContainer}
+                                         style={[styles.categoryImageContainer,{backgroundColor:'lightgreen'}]}
                                     >
-                                        <Image
+                                        {/* <Image
                                             source={item?.image_2}
                                             resizeMode="contain"
                                             style={styles.categoryImage}
-                                        />
+                                        /> */}
                                     </View>
 
                                     <View
                                         style={styles.categoryImageContainer}
                                     >
-                                        <Image
-                                            source={item?.image_3}
-                                            resizeMode="contain"
-                                            style={styles.categoryImage}
-                                        />
+                                        
                                     </View>
                                 </View>
 
@@ -648,7 +408,7 @@ const ProductTab = () => {
                                             ...FONTS.body4
                                         }}
                                     >
-                                        {item?.qty} Products
+                                        {item?.qty}
                                     </Text>
                                 </View>
                             </TouchableOpacity>
@@ -666,11 +426,7 @@ const ProductTab = () => {
                     backgroundColor: COLORS.lightGrey
                 }}
             >
-                {/* Flash Deals */}
-                {renderFlashDeals()}
-
-                {/* Promotion */}
-                {renderPromotionItems()}
+             
 
                 {/* Categories */}
                 {renderCategories()}

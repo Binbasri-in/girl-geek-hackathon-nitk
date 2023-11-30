@@ -3,14 +3,14 @@ import { COLORS } from "../constants";
 const banners = [
     {
         id: 1,
-        title: 'Same Price of $100',
-        description: 'Shoe in Miniacs Shop',
-        date: 'Dec 24',
-        image: require('../assets/images/banner-01.png'),
+        title: 'Show my score',
+        description: 'Points needed to become pro',
+        date: 'Dec 1',
+        image: require('../assets/images/banner-03.png'),
     },
     {
         id: 2,
-        title: 'FlASH SALE Haloween',
+        title: 'Checklist',
         description: 'Stay tune and check your notif everyday',
         date: '6 hours',
         image: require('../assets/images/banner-02.png'),
@@ -64,8 +64,8 @@ const promoItems = [
 const categories = [
     {
         id: 1,
-        name: "Bed",
-        qty: "1.2k",
+        name: "Report Creation",
+        qty: "High Priority",
         image_1: require('../assets/images/dummy/bed_01.png'),
         image_2: require('../assets/images/dummy/bed_02.png'),
         image_3: require('../assets/images/dummy/bed_03.png'),
@@ -73,8 +73,8 @@ const categories = [
     },
     {
         id: 2,
-        name: "Bathtub",
-        qty: "1.2k",
+        name: "Website Updates",
+        qty: "low Priority",
         image_1: require('../assets/images/dummy/bathtub_01.png'),
         image_2: require('../assets/images/dummy/bathtub_02.png'),
         image_3: require('../assets/images/dummy/bathtub_03.png'),
@@ -82,8 +82,8 @@ const categories = [
     },
     {
         id: 2,
-        name: "Chair",
-        qty: "1.2k",
+        name: "App Updates",
+        qty: "Escaltion p1",
         image_1: require('../assets/images/dummy/chair_01.png'),
         image_2: require('../assets/images/dummy/chair_02.png'),
         image_3: require('../assets/images/dummy/chair_03.png'),
@@ -91,8 +91,8 @@ const categories = [
     },
     {
         id: 3,
-        name: "Wardrobe",
-        qty: "1.2k",
+        name: "Customer Updates",
+        qty: "P4",
         image_1: require('../assets/images/dummy/wardrobe_01.png'),
         image_2: require('../assets/images/dummy/wardrobe_02.png'),
         image_3: require('../assets/images/dummy/wardrobe_03.png'),
@@ -155,29 +155,29 @@ const quickALinks = [
 const services = [
     {
         id: 1,
-        title: 'Fast shopping',
-        description: 'Fast home delivery within 2h free shipping',
+        title: 'Fast response',
+        description: 'Fast response From him was observed in last few Alotted work',
         price: 'Only 50$/Month',
         image: require('../assets/images/get_card.png')
     },
     {
         id: 2,
-        title: 'Fresh food',
-        description: 'You just need the menu we will suggest, choose buy for you',
+        title: 'Escalation level ++',
+        description: 'Level of Escalation was higher in last alloted work',
         price: 'Only 20$/Month',
         image: require('../assets/images/buy_coffee.png')
     },
     {
         id: 3,
-        title: 'Exchange old things',
-        description: 'You can exchange used items',
+        title: 'Website Developer',
+        description: 'He is Absolutely Good in Website Development',
         price: 'Only 10$/Month',
         image: require('../assets/images/get_money.png')
     },
     {
         id: 4,
-        title: 'Give gifts friend',
-        description: 'Help you to send gifts to your loved ones',
+        title: 'Code Debugger',
+        description: 'He is Absolutely Good in Code Debugging ',
         price: 'Only 5$/Month',
         image: require('../assets/images/get_reward.png')
     }
@@ -219,19 +219,19 @@ const orders = [
         id: 1,
         order_no: 678765,
         date: '11:20AM   2018-03-12',
-        total: '$570.00'
+        total: '20'
     },
     {
         id: 2,
         order_no: 678765,
         date: '11:20AM   2018-03-12',
-        total: '$208.00'
+        total: '11'
     },
     {
         id: 3,
         order_no: 678765,
         date: '11:20AM   2018-03-12',
-        total: '$600.00'
+        total: '20'
     }
 ]
 

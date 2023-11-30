@@ -208,15 +208,6 @@ const Home = ({ navigation, showCameraModal, toggleCameraModal, cartQuantity }) 
                             flexDirection: "row"
                         }}
                     >
-                        <IconButton
-                            icon={icons.shoppingBag}
-                            iconStyle={{
-                                marginRight: SIZES.radius,
-                                width: 25,
-                                height: 25
-                            }}
-                        //onPress={() => setIsVisible(!isVisible)}
-                        />
 
                         <IconButton
                             icon={icons.bell}
@@ -226,22 +217,6 @@ const Home = ({ navigation, showCameraModal, toggleCameraModal, cartQuantity }) 
                                 height: 25
                             }}
                             onPress={() => navigation.navigate("Notification")}
-                        />
-
-                        <IconBadgeButton
-                            icon={icons.shoppingCart}
-                            iconStyle={{
-                                width: 25,
-                                height: 25
-                            }}
-                            showBadge={cartQuantity > 0}
-                            badgeStyle={{
-                                borderColor: COLORS.primary
-                            }}
-                            badgeContent={cartQuantity}
-                            onPress={() => {
-                                navigation.navigate("Cart")
-                            }}
                         />
                     </View>
                 }
@@ -258,7 +233,7 @@ const Home = ({ navigation, showCameraModal, toggleCameraModal, cartQuantity }) 
                     marginHorizontal: SIZES.padding,
                     borderRadius: SIZES.radius,
                 }}
-                placeholder="Search Product"
+                placeholder="Search "
                 inputStyle={{
                     marginLeft: SIZES.radius
                 }}

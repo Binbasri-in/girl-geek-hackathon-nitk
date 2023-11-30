@@ -39,32 +39,13 @@ const Addtask = ({ navigation }) => {
 
     const animationState = useAnimationState({
         signIn: {
-            height: SIZES.height * 0.55,
-        },
-        signUp: {
-            height: SIZES.height > 700 ? SIZES.height * 0.70 : SIZES.height * 0.65,
-        },
+            height: SIZES.height * 0.7,
+        }
     })
 
     React.useEffect(() => {
         // Animation
         animationState.transitionTo('signIn')
-
-        // Fetch countires
-        fetch("https://restcountries.com/v2/all")
-            .then(response => response.json())
-            .then(data => {
-                let countryData = data.map(item => {
-                    return {
-                        code: item.alpha2Code,
-                        name: item.name,
-                        callingCode: `+${item.callingCodes[0]}`,
-                        flag: `https://countryflagsapi.com/png/${item.alpha2Code}`
-                    }
-                })
-
-                setCountries(countryData)
-            })
     }, [])
 
     // Render
@@ -75,7 +56,7 @@ const Addtask = ({ navigation }) => {
                 state={animationState}
                 style={{
                     marginTop: SIZES.padding,
-                    height: SIZES.height * 0.55,
+                    height: SIZES.height,
                 }}
             >
                 <Shadow>
@@ -98,7 +79,7 @@ const Addtask = ({ navigation }) => {
                                 ...FONTS.h1,
                             }}
                         >
-                            AI task assigner
+                            AI Task Assigner
                         </Text>
 
                         <KeyboardAwareScrollView
@@ -117,12 +98,12 @@ const Addtask = ({ navigation }) => {
                                     borderRadius: SIZES.radius,
                                     backgroundColor: COLORS.error,
                                 }}
-                                placeholder="Title"
+                                placeholder="Role"
                                 value={email}
                                 onChange={(text) => setEmail(text)}
                                 prependComponent={
                                     <Image
-                                        source={icons.email}
+                                        source={icons.cube_outline}
                                         style={{
                                             width: 25,
                                             height: 25,
@@ -146,6 +127,46 @@ const Addtask = ({ navigation }) => {
                                 prependComponent={
                                     <Image
                                         source={icons.email}
+                                        style={{
+                                            width: 25,
+                                            height: 25,
+                                            marginRight: SIZES.base
+                                        }}
+                                    />
+                                }
+                            />
+                            <FormInput
+                                containerStyle={{
+                                    borderRadius: SIZES.radius,
+                                    marginTop: SIZES.radius,
+                                    backgroundColor: COLORS.error,
+                                }}
+                                placeholder="Description"
+                                value={email}
+                                onChange={(text) => setEmail(text)}
+                                prependComponent={
+                                    <Image
+                                        source={icons.file_text_fill}
+                                        style={{
+                                            width: 25,
+                                            height: 25,
+                                            marginRight: SIZES.base
+                                        }}
+                                    />
+                                }
+                            />
+                            <FormInput
+                                containerStyle={{
+                                    borderRadius: SIZES.radius,
+                                    marginTop: SIZES.radius,
+                                    backgroundColor: COLORS.error,
+                                }}
+                                placeholder="DEADLINE"
+                                value={email}
+                                onChange={(text) => setEmail(text)}
+                                prependComponent={
+                                    <Image
+                                        source={icons.alert_circle}
                                         style={{
                                             width: 25,
                                             height: 25,
@@ -200,197 +221,13 @@ const Addtask = ({ navigation }) => {
         )
     }
 
-    function renderSignUp() {
-        return (
-            <MotiView
-                state={animationState}
-                style={{
-                    marginTop: SIZES.padding,
-                    backgroundColor: COLORS.light
-                }}
-            >
-                <Shadow>
-                    <View
-                        style={{
-                            flex: 1,
-                            width: SIZES.width - (SIZES.padding * 2),
-                            paddingHorizontal: SIZES.padding,
-                            paddingVertical: SIZES.padding,
-                            borderRadius: SIZES.radius,
-                            backgroundColor: COLORS.light,
-                            zIndex: 1
-                        }}
-                    >
-                        <Text
-                            style={{
-                                ...FONTS.h1,
-                                lineHeight: 45
-                            }}
-                        >
-                            Create new account
-                        </Text>
-
-                        <KeyboardAwareScrollView
-                            enableOnAndroid={true}
-                            keyboardDismissMode="on-drag"
-                            keyboardShouldPersistTaps={"handled"}
-                            extraScrollHeight={-100}
-                            showsVerticalScrollIndicator={false}
-                            contentContainerStyle={{
-                                flexGrow: 1,
-                                marginTop: SIZES.padding,
-                                paddingBottom: SIZES.padding * 2
-                            }}
-                        >
-                            {/* Name */}
-                            <FormInput
-                                containerStyle={{
-                                    borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.error,
-                                }}
-                                placeholder="Name"
-                                value={name}
-                                onChange={(text) => setName(text)}
-                                prependComponent={
-                                    <Image
-                                        source={icons.person}
-                                        style={{
-                                            width: 25,
-                                            height: 25,
-                                            marginRight: SIZES.base
-                                        }}
-                                    />
-                                }
-                            />
-
-                            {/* Email */}
-                            <FormInput
-                                containerStyle={{
-                                    marginTop: SIZES.radius,
-                                    borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.error,
-                                }}
-                                placeholder="Email"
-                                value={email}
-                                onChange={(text) => setEmail(text)}
-                                prependComponent={
-                                    <Image
-                                        source={icons.email}
-                                        style={{
-                                            width: 25,
-                                            height: 25,
-                                            marginRight: SIZES.base
-                                        }}
-                                    />
-                                }
-                            />
-
-                            {/* Phone */}
-                            <FormInput
-                                containerStyle={{
-                                    marginTop: SIZES.radius,
-                                    borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.error,
-                                }}
-                                placeholder="Phone"
-                                value={phone}
-                                onChange={(text) => setPhone(text)}
-                                prependComponent={
-                                    <Image
-                                        source={icons.phone}
-                                        style={{
-                                            width: 25,
-                                            height: 25,
-                                            marginRight: SIZES.base
-                                        }}
-                                    />
-                                }
-                            />
-
-                            {/* Country */}
-                            <CountryDropDown
-                                containerStyle={{
-                                    marginTop: SIZES.radius
-                                }}
-                                selectedCountry={selectedCountry}
-                                onPress={() => setShowCountryModal(!showCountryModal)}
-                            />
-
-                            {/* Password */}
-                            <FormInput
-                                containerStyle={{
-                                    marginTop: SIZES.radius,
-                                    borderRadius: SIZES.radius,
-                                    backgroundColor: COLORS.error,
-                                }}
-                                placeholder="Password"
-                                value={password}
-                                secureTextEntry={!isVisible}
-                                onChange={(text) => setPassword(text)}
-                                prependComponent={
-                                    <Image
-                                        source={icons.lock}
-                                        style={{
-                                            width: 25,
-                                            height: 25,
-                                            marginRight: SIZES.base
-                                        }}
-                                    />
-                                }
-                                appendComponent={
-                                    <IconButton
-                                        icon={isVisible ? icons.eye_off : icons.eye}
-                                        iconStyle={{
-                                            tintColor: COLORS.grey
-                                        }}
-                                        onPress={() => setIsVisible(!isVisible)}
-                                    />
-                                }
-                            />
-
-                            {/* Terms and Conditions */}
-                            <CheckBox
-                                containerStyle={{
-                                    marginTop: SIZES.radius
-                                }}
-                                label="By registering, you agree to our Terms and that you have read our Data Use Policy."
-                                isSelected={termsChecked}
-                                onPress={() => setTermsChecked(!termsChecked)}
-                            />
-                        </KeyboardAwareScrollView>
-
-                        <TextButton
-                            label="Create Account"
-                            contentContainerStyle={{
-                                height: 55,
-                                borderRadius: SIZES.radius,
-                                backgroundColor: COLORS.primary
-                            }}
-                            labelStyle={{
-                                ...FONTS.h3
-                            }}
-                            onPress={() => {
-
-                            }}
-                        />
-                    </View>
-                </Shadow>
-            </MotiView>
-        )
-    }
+  
 
     function renderAuthContainer() {
         if (mode == "signIn") {
             return renderSignIn()
-        } else {
-            return renderSignUp()
-        }
+        } 
     }
-
-   
-
-
-   
 
     return (
         <View
@@ -423,16 +260,5 @@ const Addtask = ({ navigation }) => {
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    socialButtonContainer: {
-        width: 55,
-        height: 55,
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: SIZES.radius,
-        backgroundColor: COLORS.grey20
-    }
-})
 
 export default Addtask;
