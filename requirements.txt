@@ -2,3 +2,4 @@ flask
 flask-bcrypt
 flask-pymongo
 flask-cors
+python-dotenv
