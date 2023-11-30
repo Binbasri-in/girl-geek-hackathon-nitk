@@ -1,0 +1,4 @@
+flask
+flask-bcrypt
+flask-pymongo
+flask-cors
