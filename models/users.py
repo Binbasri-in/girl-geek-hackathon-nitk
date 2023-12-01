@@ -9,6 +9,7 @@ class Users:
         self.phone = phone
         self.country = country
         self.password = password
+        self.assigned_tasks = []
     def add_user(self):
         try:
             users.insert_one(self.__dict__)
