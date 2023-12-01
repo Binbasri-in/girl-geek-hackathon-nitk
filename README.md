@@ -12,7 +12,7 @@
 - [Contributors](#contributors)
 
 ## Introduction
-In response to the persistent challenges faced by remote teams in managing tasks, communication, and motivation, our team developed ## Momentum during the 48-hour hackathon at NIT Karnataka. This innovative solution addresses the limitations of conventional project management tools, offering dynamic adaptability to the evolving needs of remote work setups.
+In the fast-paced landscape of remote work, teams encounter persistent challenges in managing tasks, fostering effective communication, and sustaining motivation. As a response to these hurdles, our team at NIT Karnataka's 48-hour hackathon presents Momentum. This application serves as a dynamic solution, engineered to tackle the shortcomings of traditional project management tools, ensuring adaptability to the evolving needs of remote teams.
  
 
 ## Features
