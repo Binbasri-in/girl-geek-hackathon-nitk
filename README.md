@@ -11,13 +11,21 @@
 - [Contributors](#contributors)
 
 ## Introduction
-A crossword is a word puzzle that usually takes the form of a square or a rectangular grid of white-and black-shaded squares. The game's goal is to fill the white squares with letters, forming words or phrases, by solving clues, which lead to the answers.
-
+* In the ever-evolving realm of remote work, teams grapple with ongoing difficulties in effectively managing tasks, fostering communication, and maintaining 
+  motivation.
+* Conventional project management tools, while reliable, often fall short in adapting to the dynamic needs of remote teams, resulting in challenges like 
+  inefficient task distribution, communication breakdowns, and a notable lack of motivation. 
+* These obstacles inevitably contribute to diminished productivity and hinder overall project success.
+ 
 
 ## Features
-* User can login/register to start the game
-* User can view completed and incompleted game in dashboard
-* User get one clue when they start the game.
+* Manger Can Assign Task with the help of Ai Support 
+* Employee can view completed and incompleted task
+* Employee will get time to time notification for break
+* Chat Features to Chat Between Teams
+* Coins Features For on Time Submmision
+* Fast Work Done and Work Analysis Done By Ai
+* 
 
 ## Requirements
 * [`npm`](https://www.npmjs.com/get-npm)
@@ -32,11 +40,11 @@ A crossword is a word puzzle that usually takes the form of a square or a rectan
 
 1. Clone this repository
    ```
-   $ https://github.com/Binbasri-in/reva_hack.git
+   $ https://github.com/Binbasri-in/girl-geek-hackathon-nitk.git
    ```
 2. Install all depedencies on the package.json
    ```
-   $ cd reva_hack
+   $ cd girl-geek-hackathon-nitk
    $ npm i
    ```
 3. Run Application
@@ -50,8 +58,8 @@ A crossword is a word puzzle that usually takes the form of a square or a rectan
 
 1. Install all requirements.txt
    ```
-   $ cd reva_hack
-   $ cd cyber_server
+   $ cd backend
+   $ cd girl-geek-hackathon-nitk
    $ pip install -r requirements.txt
    ```
 3. Run Backend
@@ -65,7 +73,6 @@ Deploy it to Heroku and <a href="https://github.com/Binbasri-in/try_hack_deploy"
 
 ## Screenshoot
 <div align="center">
-    <img width="200" src="./images/5.jpeg"> 
     <img width="200" src="./images/2.jpeg">  
     <img width="200" src="./images/1.jpeg"> 
     <img width="200" src="./images/3.jpeg">    
@@ -87,14 +94,14 @@ Deploy it to Heroku and <a href="https://github.com/Binbasri-in/try_hack_deploy"
       </td>
 <!--       -->
        <td align="center">
-        <a href="https://github.com/loki2107">
-          <img width="100" src="https://avatars.githubusercontent.com/u/107473210?v=4" alt="LOKESH E"><br/>
+        <a href="https://github.com/krishna1804g">
+          <img width="100" src="https://avatars.githubusercontent.com/u/86600213?v=4" alt="LOKESH E"><br/>
           <sub><b>Krishna</b></sub>
         </a>
       </td>
       <td align="center">
-        <a href="https://github.com/Sammy-100">
-          <img width="100" src="https://avatars.githubusercontent.com/u/107463781?v=4" alt="Samiksha"><br/>
+        <a href="https://github.com/">
+          <img width="100" src="https://avatars.githubusercontent.com/u/86600213?v=4" alt="Samiksha"><br/>
           <sub><b>Mimansa</b></sub>
         </a>
       </td>
