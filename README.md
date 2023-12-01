@@ -8,24 +8,26 @@
 - [Requirements](#requirements)
 - [How To Run](#how-to-run)
 - [Screenshoot](#screenshoot)
+- [Future Scope](#FutureScope)
 - [Contributors](#contributors)
 
 ## Introduction
-* In the ever-evolving realm of remote work, teams grapple with ongoing difficulties in effectively managing tasks, fostering communication, and maintaining 
-  motivation.
-* Conventional project management tools, while reliable, often fall short in adapting to the dynamic needs of remote teams, resulting in challenges like 
-  inefficient task distribution, communication breakdowns, and a notable lack of motivation. 
-* These obstacles inevitably contribute to diminished productivity and hinder overall project success.
+In response to the persistent challenges faced by remote teams in managing tasks, communication, and motivation, our team developed ## Momentum during the 48-hour hackathon at NIT Karnataka. This innovative solution addresses the limitations of conventional project management tools, offering dynamic adaptability to the evolving needs of remote work setups.
  
 
 ## Features
-* Manger Can Assign Task with the help of Ai Support 
-* Employee can view completed and incompleted task
-* Employee will get time to time notification for break
-* Chat Features to Chat Between Teams
-* Coins Features For on Time Submmision
-* Fast Work Done and Work Analysis Done By Ai
-* 
+* Task Dashboard
+* Real-time Collaboration
+* AI-Driven Task Allocation
+* Performance Analytics
+* Collaboration Feature
+* Cross-Platform Compatibility
+* Proactive Reminders
+* Gamification
+* Real time notification
+* Calendar
+* OCR Feature
+* Predictive Task Prioritization
 
 ## Requirements
 * [`npm`](https://www.npmjs.com/get-npm)
@@ -81,6 +83,15 @@ Deploy it to Heroku and <a href="https://github.com/Binbasri-in/try_hack_deploy"
 
 </div>
 
+
+## FutureScope
+* Multilingual Support
+* Dark and Light Mode
+* More Ai Assistence
+* Firewalls
+* Doc Support
+* Doc Editing
+* Integrated Meeting
 
 ## Contributors
 <center>
