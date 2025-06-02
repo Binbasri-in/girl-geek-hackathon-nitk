@@ -5,16 +5,16 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 
 # Copy package files
-COPY package*.json ./
+COPY package*.json yarn.lock ./
 
 # Install all dependencies (including devDependencies for build)
-RUN npm ci
+RUN yarn install --frozen-lockfile
 
 # Copy source code including babel config
 COPY . .
 
 # Build the web app
-RUN npx expo export --platform web
+RUN yarn expo export --platform web
 
 # Production stage
 FROM nginx:alpine
